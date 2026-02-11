@@ -16,44 +16,61 @@ Countdown Time Formatting
 local function CreateCountdownConfig()
     return CreateAbbreviateConfig({
         {
-            breakpoint = 24 * 60 * 60, -- 24 hours
+            -- breakpoint = 24 * 60 * 60, -- 24 hours
+            breakpoint = 100000, -- ~~~24 hours
             abbreviation = "d",
             significandDivisor = 24 * 60 * 60,
             fractionDivisor = 1,
             abbreviationIsGlobal = false
-        },
-        {
-            breakpoint = 99 * 60, -- 99 minutes
+        }, {
+            -- breakpoint = 99 * 60, -- 99 minutes
+            breakpoint = 10000, -- ~~~160 minutes
             abbreviation = "h",
             significandDivisor = 60 * 60,
             fractionDivisor = 1,
             abbreviationIsGlobal = false
-        },
-        {
-            breakpoint = 5 * 60, -- 5 minutes
+        }, {
+            -- breakpoint = 5 * 60, -- 5 minutes
+            breakpoint = 1000, -- ~~~16 minutes
             abbreviation = "m",
             significandDivisor = 60,
             fractionDivisor = 1,
             abbreviationIsGlobal = false
-        },
-        {
-            breakpoint = 10, --
+        }, {
+            breakpoint = 100, --
             abbreviation = "",
             significandDivisor = 1,
             fractionDivisor = 1,
             abbreviationIsGlobal = false
-        },
-        {
-            breakpoint = 0,
+        }, {
+            breakpoint = 10,
+            abbreviation = "",
+            significandDivisor = 1,
+            fractionDivisor = 1,
+            abbreviationIsGlobal = false
+        }, {
+            breakpoint = 1,
             abbreviation = "",
             significandDivisor = 1/10,
             fractionDivisor = 10,
             abbreviationIsGlobal = false
         }
     })
+
+    --return CreateAbbreviateConfig({
+    --    {
+    --        breakpoint = 100,     -- 24 hours
+    --        abbreviation = "d",
+    --        significandDivisor = 60,
+    --        fractionDivisor = 1,
+    --        abbreviationIsGlobal = false
+    --    }
+    --})
 end
 
 local function CreateBooleanConfig(breakpoint)
+    print("Creating boolean config with breakpoint " .. tostring(breakpoint))
+
     return CreateAbbreviateConfig({
         {
             breakpoint = breakpoint,
@@ -63,7 +80,7 @@ local function CreateBooleanConfig(breakpoint)
             abbreviationIsGlobal = false
         },
         {
-            breakpoint = 0,
+            breakpoint = 10,
             abbreviation = "",
             significandDivisor = 1,
             fractionDivisor = 1,

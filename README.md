@@ -29,18 +29,6 @@ A World of Warcraft addon for tracking and displaying auras (buffs and debuffs) 
 
 ## Usage
 
-### Slash Commands
-
-- `/auratracker` or `/at` - Open options panel
-- `/at config` - Open options panel
-- `/at show` - Show all aura windows
-- `/at hide` - Hide all aura windows
-- `/at help` - Show available commands
-
-### Configuration
-
-Open the options panel using `/auratracker` or through Interface > AddOns > AuraTracker.
-
 #### General Settings
 - Hide All Windows Out of Combat
 - Hide Blizzard BuffFrame
@@ -58,23 +46,6 @@ Each AuraBar can be independently configured with:
 - Appearance (size, columns, grow direction)
 - Position (X, Y, anchor point)
 
-#### Aura Groups
-Create custom groups of spell IDs for targeted filtering:
-1. Go to the "Aura Groups" tab
-2. Click "+" or select "< Create New Group >"
-3. Enter a name for the group
-4. Add comma-separated spell IDs
-5. Click "Save Group"
-6. Use the group in AuraBar filters (Show Only or Exclude)
-
-#### Profiles
-Manage multiple configurations:
-- Create new profiles
-- Switch between profiles
-- Copy settings from one profile to another
-- Delete unused profiles
-- Reset profile to defaults
-
 ## Version
 
 Current Version: 1.0.0
@@ -86,7 +57,3 @@ Demonperson a.k.a. 92Garfield
 ## License
 
 This addon is released as-is. Feel free to modify and distribute.
-
-## Support
-
-For issues, suggestions, or contributions, please use the GitHub issues page.

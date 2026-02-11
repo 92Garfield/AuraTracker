@@ -244,10 +244,15 @@ function AuraWindow:UpdateAuras()
             else
                 -- Regular auras use C_UnitAuras.GetAuraDuration
                 local duration = C_UnitAuras.GetAuraDuration("player", auraInfo.auraInstanceID)
-                remainingTime = duration:GetRemainingDuration()
+                if not duration then
+                    remainingTime = 0
+                else
+                    remainingTime = duration:GetRemainingDuration()
+                end
             end
 
             auraFrame.timerText:SetText(AuraTracker.FormatNumber.Countdown(remainingTime))
+            -- auraFrame.timerText:SetText(remainingTime)
 
             --if not AuraTracker.AuraFilter.IsTaggedPermanent(auraInfo) then
             --   auraFrame.timerText:Show()
