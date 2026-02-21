@@ -1,0 +1,58 @@
+# AuraBars - Custom Buff and Debuff Tracking Addon for World of Warcraft
+
+**Advanced Buff and Debuff Tracking with Customizable Display**
+
+---
+
+## Features
+
+### Five Independent AuraBars
+
+Each bar can be configured independently to display different aura types with precise filtering options.
+
+### Advanced Filtering System
+
+- **Blizzard API Filters** - Query helpful (buffs), harmful (debuffs), player-cast, raid-relevant, cancelable, and Maw auras
+- **Special Filters** - Pre-combat filter, permanent aura filter, consumable filter
+- **Aura Groups** - Create custom spell ID groups and filter to show only or exclude specific auras
+- **Weapon Enchants** - Toggle display of temporary weapon enchant auras
+
+### Customization Options
+
+Access the options panel via:
+- ESC → Interface → AddOns → AuraTracker
+
+Each bar can be configured independently:
+
+- **Enable/Disable Toggle** - Split Buffs and Debuffs into up to 5 bars (let me know if you need more)
+- **Combat Visibility** - Option to show bars only when in combat
+- **Tooltips** - Optional tooltip display on hover
+- **Size Control** - Adjustable icon size
+- **Layout** - Configure columns and grow direction
+- **Positioning** - X/Y offset controls with anchor point selection
+- **Background Display** - To see which area auras may cover, while adjusting position and layout
+
+### Blizzard BuffFrame Control
+
+Option to hide the default Blizzard buff frame for a cleaner UI.
+
+---
+
+## Important Note - WoW Midnight Restrictions
+
+Due to restrictions in World of Warcraft (introduced in patch 12.0), addons **cannot access aura information during restricted content** such as combat or Mythic+ dungeons.
+
+To work around this limitation, AuraTracker:
+- Caches aura information obtained before entering restricted content
+- Continues displaying long-duration buffs (consumables, raid buffs, etc.) that were active before combat
+- Uses Blizzard's built-in filtering system to query available aura data
+
+This means the addon works best for tracking pre-applied buffs and will have limited functionality for tracking combat-specific debuffs or short-duration effects during active combat in Mythic+ or similar content.
+
+---
+
+## Author
+
+Created by **Demonperson** (a.k.a. 92Garfield)
+
+https://raider.io/characters/eu/blackmoore/Demonperson
