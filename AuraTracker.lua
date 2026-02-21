@@ -66,6 +66,7 @@ function AuraTracker:CreateAuraWindow()
                     position = barConfig.position,
                     auraSize = barConfig.auraSize,
                     columns = barConfig.columns,
+                    maxAuras = barConfig.maxAuras,
                     growDirection = barConfig.growDirection,
                     showInCombat = barConfig.showInCombat,
                     showTooltips = barConfig.showTooltips

@@ -53,7 +53,8 @@ function AuraWindowManager:AddWindow(filters, config)
         columns = config.columns or 10,
         growDirection = config.growDirection or "RIGHT",
         showInCombat = config.showInCombat or false,
-        showTooltips = config.showTooltips ~= false  -- Default to true
+        showTooltips = config.showTooltips ~= false, -- Default to true
+        maxAuras = config.maxAuras or 40
     }
     
     -- Now create frames with the config

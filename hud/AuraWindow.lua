@@ -51,7 +51,8 @@ function AuraWindow:CreateAuraFrames()
     local spacing = 5
     
     -- Calculate frame size based on grow direction
-    local maxAuras = 40
+    -- Get maxAuras from config, default to 40 if not set
+    local maxAuras = self.config.maxAuras or 40
     local rows = math.ceil(maxAuras / columns)
     
     if growDirection == "RIGHT" or growDirection == "LEFT" then

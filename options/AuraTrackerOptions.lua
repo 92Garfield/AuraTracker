@@ -329,6 +329,20 @@ local function GenerateAuraBarOptions(barIndex, order)
                 SetAuraBarConfig(barIndex, "columns", value)
             end
         },
+        maxAuras = {
+            name = "Max Aura Frames",
+            desc = "Maximum number of aura frames to create for this bar.",
+            type = "range",
+            min = 1,
+            max = 100,
+            step = 1,
+            get = function(info)
+                return GetAuraBarConfig(barIndex).maxAuras or 40
+            end,
+            set = function(info, value)
+                SetAuraBarConfig(barIndex, "maxAuras", value)
+            end
+        },
         growDirection = {
             name = "Grow Direction",
             desc = "Direction in which auras are added.",
@@ -345,6 +359,11 @@ local function GenerateAuraBarOptions(barIndex, order)
             set = function(info, value)
                 SetAuraBarConfig(barIndex, "growDirection", value)
             end
+        },
+        maxAurasNote = {
+            name = "|cffff9900It is recommended to reload the interface (/reload) after changing \"Max Aura Frames\". The Blizzard Interface does otherwise not destroy unused frames.|r",
+            type = "description",
+            fontSize = "medium"
         },
         headerPosition = {
             name = "Position",
@@ -431,7 +450,9 @@ local function GenerateAuraBarOptions(barIndex, order)
         "headerAppearance",
         "auraSize",
         "columns",
+        "maxAuras",
         "growDirection",
+        "maxAurasNote",
         "headerPosition",
         "posX",
         "posY",
