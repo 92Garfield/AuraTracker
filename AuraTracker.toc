@@ -1,5 +1,5 @@
 ## Interface: 120000
-## Title: AuraTracker
+## Title: AuraBars
 ## Notes:
 ## Author: Demonperson a.k.a. 92Garfield
 ## Version: 1.0.0
