@@ -116,8 +116,6 @@ function AuraTracker.OptionsSetup:Initialize()
     
     -- Add to Blizzard options
     AuraTracker.Options.optionsFrame = LibStub("AceConfigDialog-3.0"):AddToBlizOptions("AuraTracker", "AuraTracker")
-    
-    print("AuraTracker options panel registered!")
 end
 
 -- Open the options panel

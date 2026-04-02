@@ -158,8 +158,6 @@ function AuraTracker:StartUpdateTimer()
     self.combatTicker = C_Timer.NewTicker(interval, function()
         AuraTracker:UpdateAuraWindowVisibility()
     end)
-    
-    print("AuraTracker: Update timer started (interval: " .. interval .. "s)")
 end
 
 -- Restart the update timer (called when settings change)
